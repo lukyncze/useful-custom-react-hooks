@@ -1,12 +1,12 @@
-import {useState} from 'react';
+import {useState, MouseEvent} from 'react';
 
-export default function useToggle(defaultValue = false) {
+export default function useToggle(defaultValue: boolean) {
   const [value, setValue] = useState(defaultValue);
 
-  function toggleValue(value: boolean) {
-    setValue(currentValue => (typeof value === 'boolean' ? value : !currentValue));
+  function toggleValue(event: MouseEvent<HTMLButtonElement> | boolean) {
+    setValue(currentValue => (typeof event === 'boolean' ? event : !currentValue));
   }
 
-  return [value, toggleValue];
+  return [value, toggleValue] as const;
 }
 
