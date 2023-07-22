@@ -1,10 +1,11 @@
 import {MutableRefObject, useRef} from 'react';
+import {Maybe} from '../types';
 
-type Value = string | number | boolean | Array<string> | Array<number> | Array<boolean>;
+type Value = string | number | boolean;
 
-export default function usePrevious(value: Value) {
+export default function usePrevious(value: Value): Maybe<Value> {
   const currentRef = useRef(value);
-  const previousRef: MutableRefObject<Value | undefined> = useRef();
+  const previousRef: MutableRefObject<Maybe<Value>> = useRef();
 
   if (currentRef.current !== value) {
     previousRef.current = currentRef.current;
