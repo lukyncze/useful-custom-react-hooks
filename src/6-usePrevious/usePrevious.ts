@@ -1,10 +1,10 @@
 import {MutableRefObject, useRef} from 'react';
 
-type PreviousValue = string | number | boolean | Array<string> | Array<number> | Array<boolean>;
+type Value = string | number | boolean | Array<string> | Array<number> | Array<boolean>;
 
-export default function usePrevious(value: PreviousValue) {
+export default function usePrevious(value: Value) {
   const currentRef = useRef(value);
-  const previousRef: MutableRefObject<PreviousValue | undefined> = useRef();
+  const previousRef: MutableRefObject<Value | undefined> = useRef();
 
   if (currentRef.current !== value) {
     previousRef.current = currentRef.current;
