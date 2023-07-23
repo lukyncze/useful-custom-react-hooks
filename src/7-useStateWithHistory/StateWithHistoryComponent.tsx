@@ -2,7 +2,9 @@ import {useState} from 'react';
 import useStateWithHistory from './useStateWithHistory';
 
 export default function StateWithHistoryComponent() {
-  const [count, setCount, {history, pointer, back, forward, go}] = useStateWithHistory(1);
+  const [count, setCount, {history, pointer, back, forward, go}] = useStateWithHistory(1, {
+    capacity: 15,
+  });
   const [name, setName] = useState('Kyle');
 
   return (

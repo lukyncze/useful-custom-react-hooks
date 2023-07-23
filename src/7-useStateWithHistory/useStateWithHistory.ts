@@ -1,10 +1,6 @@
-import {useCallback, useRef, useState} from 'react';
+import {Dispatch, SetStateAction, useCallback, useRef, useState} from 'react';
 
-type UseStateWithHistoryReturnType<T> = [
-  T,
-  React.Dispatch<React.SetStateAction<T>>,
-  HistoryProps<T>
-];
+type UseStateWithHistoryReturnType<T> = [T, Dispatch<SetStateAction<T>>, HistoryProps<T>];
 
 interface HistoryProps<T> {
   history: T[];
@@ -27,8 +23,9 @@ export default function useStateWithHistory<T>(
   const pointerRef = useRef<number>(0);
 
   const set = useCallback(
-    (v: React.SetStateAction<T>) => {
+    (v: SetStateAction<T>) => {
       const resolvedValue = typeof v === 'function' ? (v as (prev: T) => T)(value) : v;
+
       if (historyRef.current[pointerRef.current] !== resolvedValue) {
         if (pointerRef.current < historyRef.current.length - 1) {
           historyRef.current.splice(pointerRef.current + 1);
@@ -71,6 +68,6 @@ export default function useStateWithHistory<T>(
     go,
   };
 
-  return [value, set, {...historyProps}];
+  return [value, set, historyProps];
 }
 
