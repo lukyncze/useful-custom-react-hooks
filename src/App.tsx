@@ -4,8 +4,8 @@
 // import UpdateEffectComponent from './4-useUpdateEffect/UpdateEffectComponent';
 // import ArrayComponent from "./5-useArray/ArrayComponent"
 // import PreviousComponent from "./6-usePrevious/PreviousComponent"
-import StateWithHistoryComponent from './7-useStateWithHistory/StateWithHistoryComponent';
-// import StorageComponent from "./8-useStorage/StorageComponent"
+// import StateWithHistoryComponent from './7-useStateWithHistory/StateWithHistoryComponent';
+import StorageComponent from "./8-useStorage/StorageComponent"
 // import AsyncComponent from "./9-useAsync/AsyncComponent"
 // import FetchComponent from "./10-useFetch/FetchComponent"
 // import ScriptComponent from "./11-useScript/ScriptComponent"
@@ -36,8 +36,8 @@ function App() {
   // return <UpdateEffectComponent />;
   // return <ArrayComponent />
   // return <PreviousComponent />
-  return <StateWithHistoryComponent />;
-  // return <StorageComponent />
+  // return <StateWithHistoryComponent />;
+  return <StorageComponent />
   // return <AsyncComponent />
   // return <FetchComponent />
   // return <ScriptComponent />
