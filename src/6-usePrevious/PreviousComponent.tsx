@@ -4,7 +4,7 @@ import usePrevious from './usePrevious';
 export default function PreviousComponent() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState('Kyle');
-  const previousCount = usePrevious(count);
+  const previousCount = usePrevious<number>(count);
 
   return (
     <div>
