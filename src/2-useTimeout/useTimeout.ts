@@ -1,8 +1,9 @@
 import {useCallback, useEffect, useRef} from 'react';
+import {Maybe} from '../types';
 
 export default function useTimeout(callback: () => void, delay: number) {
   const callbackRef = useRef(callback);
-  const timeoutRef: React.MutableRefObject<number | undefined> = useRef();
+  const timeoutRef: React.MutableRefObject<Maybe<number>> = useRef();
 
   useEffect(() => {
     callbackRef.current = callback;
