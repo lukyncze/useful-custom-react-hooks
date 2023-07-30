@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState, useRef, RefObject} from 'react';
 import useDeepCompareEffect from './useDeepCompareEffect';
 
 interface Person {
@@ -14,21 +14,16 @@ export default function DeepCompareEffectComponent() {
 
   const person: Person = {name: 'Kyle', age};
 
-  useEffect(() => {
-    if (useEffectCountRef.current) {
-      useEffectCountRef.current.textContent = (
-        parseInt(useEffectCountRef.current.textContent || '0') + 1
-      ).toString();
+  const updateRefTextContent = (ref: RefObject<HTMLSpanElement>) => {
+    if (ref.current) {
+      const newTextContent = (parseInt(ref.current.textContent || '0') + 1).toString();
+      ref.current.textContent = newTextContent;
     }
-  }, [person]);
+  };
 
-  useDeepCompareEffect(() => {
-    if (useDeepCompareEffectCountRef.current) {
-      useDeepCompareEffectCountRef.current.textContent = (
-        parseInt(useDeepCompareEffectCountRef.current.textContent || '0') + 1
-      ).toString();
-    }
-  }, [person]);
+  useEffect(() => updateRefTextContent(useEffectCountRef), [person]);
+
+  useDeepCompareEffect(() => updateRefTextContent(useDeepCompareEffectCountRef), [person]);
 
   return (
     <div>
