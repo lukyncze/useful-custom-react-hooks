@@ -1,6 +1,5 @@
-import {useEffect, useState, useRef, MutableRefObject} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import useDeepCompareEffect from './useDeepCompareEffect';
-import {Maybe} from '../types';
 
 interface Person {
   name: string;
@@ -8,12 +7,10 @@ interface Person {
 }
 
 export default function DeepCompareEffectComponent() {
-  const [age, setAge] = useState(0);
-  const [otherCount, setOtherCount] = useState(0);
-  const useEffectCountRef: MutableRefObject<Maybe<HTMLSpanElement>> =
-    useRef<Maybe<HTMLSpanElement>>();
-  const useDeepCompareEffectCountRef: MutableRefObject<Maybe<HTMLSpanElement>> =
-    useRef<Maybe<HTMLSpanElement>>();
+  const [age, setAge] = useState<number>(0);
+  const [otherCount, setOtherCount] = useState<number>(0);
+  const useEffectCountRef = useRef<HTMLSpanElement>(null);
+  const useDeepCompareEffectCountRef = useRef<HTMLSpanElement>(null);
 
   const person: Person = {name: 'Kyle', age};
 
