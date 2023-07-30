@@ -1,21 +1,36 @@
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState, useRef, MutableRefObject} from 'react';
 import useDeepCompareEffect from './useDeepCompareEffect';
+import {Maybe} from '../types';
+
+interface Person {
+  name: string;
+  age: number;
+}
 
 export default function DeepCompareEffectComponent() {
   const [age, setAge] = useState(0);
   const [otherCount, setOtherCount] = useState(0);
-  const useEffectCountRef = useRef();
-  const useDeepCompareEffectCountRef = useRef();
+  const useEffectCountRef: MutableRefObject<Maybe<HTMLSpanElement>> =
+    useRef<Maybe<HTMLSpanElement>>();
+  const useDeepCompareEffectCountRef: MutableRefObject<Maybe<HTMLSpanElement>> =
+    useRef<Maybe<HTMLSpanElement>>();
 
-  const person = {age: age, name: 'Kyle'};
+  const person: Person = {name: 'Kyle', age};
 
   useEffect(() => {
-    useEffectCountRef.current.textContent = parseInt(useEffectCountRef.current.textContent) + 1;
+    if (useEffectCountRef.current) {
+      useEffectCountRef.current.textContent = (
+        parseInt(useEffectCountRef.current.textContent || '0') + 1
+      ).toString();
+    }
   }, [person]);
 
   useDeepCompareEffect(() => {
-    useDeepCompareEffectCountRef.current.textContent =
-      parseInt(useDeepCompareEffectCountRef.current.textContent) + 1;
+    if (useDeepCompareEffectCountRef.current) {
+      useDeepCompareEffectCountRef.current.textContent = (
+        parseInt(useDeepCompareEffectCountRef.current.textContent || '0') + 1
+      ).toString();
+    }
   }, [person]);
 
   return (

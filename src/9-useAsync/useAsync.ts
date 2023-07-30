@@ -12,7 +12,7 @@ interface UseAsyncReturnType<T> {
 
 export default function useAsync<T>(
   callback: () => Promise<T>,
-  dependencies: unknown[] = []
+  dependencies: Array<unknown> = []
 ): UseAsyncReturnType<T> {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error>();
