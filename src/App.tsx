@@ -9,8 +9,8 @@
 // import AsyncComponent from "./9-useAsync/AsyncComponent"
 // import FetchComponent from './10-useFetch/FetchComponent';
 // import ScriptComponent from "./11-useScript/ScriptComponent"
-import DeepCompareEffectComponent from "./12-useDeepCompareEffect/DeepCompareEffectComponent"
-// import EventListenerComponent from "./13-useEventListener/EventListenerComponent"
+// import DeepCompareEffectComponent from "./12-useDeepCompareEffect/DeepCompareEffectComponent"
+import EventListenerComponent from './13-useEventListener/EventListenerComponent';
 // import OnScreenComponentComponent from "./14-useOnScreen/OnScreenComponent"
 // import WindowSizeComponent from "./15-useWindowSize/WindowSizeComponent"
 // import MediaQueryComponent from "./16-useMediaQuery/MediaQueryComponent"
@@ -41,8 +41,8 @@ function App() {
   // return <AsyncComponent />
   // return <FetchComponent />;
   // return <ScriptComponent />
-  return <DeepCompareEffectComponent />
-  // return <EventListenerComponent />
+  // return <DeepCompareEffectComponent />
+  return <EventListenerComponent />;
   // return <OnScreenComponentComponent />
   // return <WindowSizeComponent />
   // return <MediaQueryComponent />
