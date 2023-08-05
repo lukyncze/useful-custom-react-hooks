@@ -4,7 +4,7 @@ export default function useOnScreen(ref: RefObject<HTMLHeadingElement>, rootMarg
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (ref.current == null) return;
+    if (ref.current === null) return;
 
     const observer = new IntersectionObserver(([entry]) => setIsVisible(entry.isIntersecting), {
       rootMargin,
@@ -13,7 +13,7 @@ export default function useOnScreen(ref: RefObject<HTMLHeadingElement>, rootMarg
     observer.observe(ref.current);
 
     return () => {
-      if (ref.current == null) return;
+      if (ref.current === null) return;
       observer.unobserve(ref.current);
     };
   }, [ref.current, rootMargin]);
