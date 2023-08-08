@@ -1,5 +1,5 @@
 import {isNil} from 'lodash';
-import {useState, useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {Maybe} from '../types';
 
 interface Coordinates {
