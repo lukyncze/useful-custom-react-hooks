@@ -15,8 +15,8 @@
 // import WindowSizeComponent from './15-useWindowSize/WindowSizeComponent';
 // import MediaQueryComponent from './16-useMediaQuery/MediaQueryComponent';
 // import GeolocationComponent from './17-useGeolocation/GeolocationComponent';
-import StateWithValidationComponent from './18-useStateWithValidation/StateWithValidationComponent';
-// import SizeComponent from "./19-useSize/SizeComponent"
+// import StateWithValidationComponent from './18-useStateWithValidation/StateWithValidationComponent';
+import SizeComponent from './19-useSize/SizeComponent';
 // import EffectOnceComponent from "./20-useEffectOnce/EffectOnceComponent"
 // import ClickOutsideComponent from "./21-useClickOutside/ClickOutsideComponent"
 // import DarkModeComponent from "./22-useDarkMode/DarkModeComponent"
@@ -47,8 +47,8 @@ function App() {
   // return <WindowSizeComponent />
   // return <MediaQueryComponent />;
   // return <GeolocationComponent />;
-  return <StateWithValidationComponent />;
-  // return <SizeComponent />
+  // return <StateWithValidationComponent />;
+  return <SizeComponent />;
   // return <EffectOnceComponent />
   // return <ClickOutsideComponent />
   // return <DarkModeComponent />
