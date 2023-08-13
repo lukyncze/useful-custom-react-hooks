@@ -16,8 +16,8 @@
 // import MediaQueryComponent from './16-useMediaQuery/MediaQueryComponent';
 // import GeolocationComponent from './17-useGeolocation/GeolocationComponent';
 // import StateWithValidationComponent from './18-useStateWithValidation/StateWithValidationComponent';
-import SizeComponent from './19-useSize/SizeComponent';
-// import EffectOnceComponent from "./20-useEffectOnce/EffectOnceComponent"
+// import SizeComponent from './19-useSize/SizeComponent';
+import EffectOnceComponent from './20-useEffectOnce/EffectOnceComponent';
 // import ClickOutsideComponent from "./21-useClickOutside/ClickOutsideComponent"
 // import DarkModeComponent from "./22-useDarkMode/DarkModeComponent"
 // import CopyToClipboardComponent from "./23-useCopyToClipboard/CopyToClipboardComponent"
@@ -48,8 +48,8 @@ function App() {
   // return <MediaQueryComponent />;
   // return <GeolocationComponent />;
   // return <StateWithValidationComponent />;
-  return <SizeComponent />;
-  // return <EffectOnceComponent />
+  // return <SizeComponent />;
+  return <EffectOnceComponent />;
   // return <ClickOutsideComponent />
   // return <DarkModeComponent />
   // return <CopyToClipboardComponent />
