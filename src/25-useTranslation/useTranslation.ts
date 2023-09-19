@@ -35,6 +35,7 @@ export default function useTranslation(): UseTranslationReturnType {
 function getNestedTranslation(language: StorageValue<string>, keys: Array<string>): string {
   if (!language) return '';
 
-  return keys.reduce((obj, key) => obj?.[key], translations[language]);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return keys.reduce((obj, key) => obj?.[key], (translations as any)[language]);
 }
 
