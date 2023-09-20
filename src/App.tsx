@@ -22,8 +22,8 @@
 // import DarkModeComponent from './22-useDarkMode/DarkModeComponent';
 // import CopyToClipboardComponent from './23-useCopyToClipboard/CopyToClipboardComponent';
 // import CookieComponent from './24-useCookie/CookieComponent';
-import TranslationComponent from './25-useTranslation/TranslationComponent';
-// import OnlineStatusComponent from "./26-useOnlineStatus/OnlineStatusComponent"
+// import TranslationComponent from './25-useTranslation/TranslationComponent';
+import OnlineStatusComponent from './26-useOnlineStatus/OnlineStatusComponent';
 // import RenderCountComponent from "./27-useRenderCount/RenderCountComponent"
 // import DebugInformationComponent from "./28-useDebugInformation/DebugInformationComponent"
 // import HoverComponent from "./29-useHover/HoverComponent"
@@ -54,8 +54,8 @@ function App() {
   // return <DarkModeComponent />;
   // return <CopyToClipboardComponent />;
   // return <CookieComponent />;
-  return <TranslationComponent />;
-  // return <OnlineStatusComponent />
+  // return <TranslationComponent />;
+  return <OnlineStatusComponent />;
   // return <RenderCountComponent />
   // return <DebugInformationComponent />
   // return <HoverComponent />
