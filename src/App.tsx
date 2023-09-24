@@ -23,8 +23,8 @@
 // import CopyToClipboardComponent from './23-useCopyToClipboard/CopyToClipboardComponent';
 // import CookieComponent from './24-useCookie/CookieComponent';
 // import TranslationComponent from './25-useTranslation/TranslationComponent';
-import OnlineStatusComponent from './26-useOnlineStatus/OnlineStatusComponent';
-// import RenderCountComponent from "./27-useRenderCount/RenderCountComponent"
+// import OnlineStatusComponent from './26-useOnlineStatus/OnlineStatusComponent';
+import RenderCountComponent from './27-useRenderCount/RenderCountComponent';
 // import DebugInformationComponent from "./28-useDebugInformation/DebugInformationComponent"
 // import HoverComponent from "./29-useHover/HoverComponent"
 // import LongPressComponent from "./30-useLongPress.js/LongPressComponent"
@@ -55,8 +55,8 @@ function App() {
   // return <CopyToClipboardComponent />;
   // return <CookieComponent />;
   // return <TranslationComponent />;
-  return <OnlineStatusComponent />;
-  // return <RenderCountComponent />
+  // return <OnlineStatusComponent />;
+  return <RenderCountComponent />;
   // return <DebugInformationComponent />
   // return <HoverComponent />
   // return <LongPressComponent />
