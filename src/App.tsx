@@ -25,8 +25,8 @@
 // import TranslationComponent from './25-useTranslation/TranslationComponent';
 // import OnlineStatusComponent from './26-useOnlineStatus/OnlineStatusComponent';
 // import RenderCountComponent from './27-useRenderCount/RenderCountComponent';
-import DebugInformationComponent from './28-useDebugInformation/DebugInformationComponent';
-// import HoverComponent from "./29-useHover/HoverComponent"
+// import DebugInformationComponent from './28-useDebugInformation/DebugInformationComponent';
+import HoverComponent from './29-useHover/HoverComponent';
 // import LongPressComponent from "./30-useLongPress.js/LongPressComponent"
 
 function App() {
@@ -57,8 +57,8 @@ function App() {
   // return <TranslationComponent />;
   // return <OnlineStatusComponent />;
   // return <RenderCountComponent />;
-  return <DebugInformationComponent />;
-  // return <HoverComponent />
+  // return <DebugInformationComponent />;
+  return <HoverComponent />;
   // return <LongPressComponent />
 }
 
