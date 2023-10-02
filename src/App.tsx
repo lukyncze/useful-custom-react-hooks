@@ -26,8 +26,8 @@
 // import OnlineStatusComponent from './26-useOnlineStatus/OnlineStatusComponent';
 // import RenderCountComponent from './27-useRenderCount/RenderCountComponent';
 // import DebugInformationComponent from './28-useDebugInformation/DebugInformationComponent';
-import HoverComponent from './29-useHover/HoverComponent';
-// import LongPressComponent from "./30-useLongPress.js/LongPressComponent"
+// import HoverComponent from './29-useHover/HoverComponent';
+import LongPressComponent from './30-useLongPress.js/LongPressComponent';
 
 function App() {
   // return <ToggleComponent />;
@@ -58,8 +58,8 @@ function App() {
   // return <OnlineStatusComponent />;
   // return <RenderCountComponent />;
   // return <DebugInformationComponent />;
-  return <HoverComponent />;
-  // return <LongPressComponent />
+  // return <HoverComponent />;
+  return <LongPressComponent />;
 }
 
 export default App;
